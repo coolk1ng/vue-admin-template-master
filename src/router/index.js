@@ -76,6 +76,13 @@ export const constantRouterMap = [
         name: '医院设置添加',
         component: () => import('@/views/hospSet/add'),
         meta: { title: '医院设置添加', icon: 'tree' }
+      },
+      {
+        path: 'edit/:id',
+        name: '医院设置编辑',
+        component: () => import('@/views/hospSet/add'),
+        meta: { title: '医院设置添加', noCache: true },
+        hidden: true
       }
     ]
   },

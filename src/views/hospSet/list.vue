@@ -33,6 +33,9 @@
           <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeById(scope.row.id)"/>
           <el-button v-if="scope.row.status===1" type="primary" size="mini" icon="el-icon-close" @click="lockAndUnLock(scope.row)"/>
           <el-button v-if="scope.row.status===0" type="primary" size="mini" icon="el-icon-check" @click="lockAndUnLock(scope.row)"/>
+          <router-link :to="'/hospSet/edit/' + scope.row.id">
+            <el-button type="primary" size="mini" icon="el-icon-edit"/>
+          </router-link>
         </template>
       </el-table-column>
     </el-table>

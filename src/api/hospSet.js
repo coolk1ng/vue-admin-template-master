@@ -48,5 +48,30 @@ export default {
       method: 'post',
       data: queryParams
     })
+  },
+  /**
+   * 添加
+   * @param hospitalSet
+   * @returns {*}
+   */
+  saveHosSet(hospitalSet) {
+    return request({
+      url: '/admin/hosp/hospitalSet/saveHospitalSet',
+      method: 'post',
+      data: hospitalSet
+    })
+  },
+  getHospSetById(id) {
+    return request({
+      url: `/admin/hosp/hospitalSet/getHospitalSetById/${id}`,
+      method: 'get'
+    })
+  },
+  updateHosSet(hospitalSet) {
+    return request({
+      url: '/admin/hosp/hospitalSet/updateHospitalSet',
+      method: 'post',
+      data: hospitalSet
+    })
   }
 }

@@ -44,7 +44,7 @@ const user = {
 
     // 获取用户信息
     GetInfo({ commit, state }) {
-      const data = { 'roles': 'admin', 'name': 'admin', 'avatar': '' }
+      const data = { 'roles': 'admin', 'name': 'admin', 'avatar': 'http://www.ay1.cc/img?w=200&h=200&c=555555' }
       if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
         commit('SET_ROLES', data.roles)
       } else {
