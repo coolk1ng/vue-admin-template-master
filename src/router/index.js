@@ -87,6 +87,21 @@ export const constantRouterMap = [
     ]
   },
   {
+    path: '/dict',
+    component: Layout,
+    redirect: '/dict/list',
+    name: '数据管理',
+    meta: { title: '数据管理', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: '数据字典',
+        component: () => import('@/views/dict/list'),
+        meta: { title: '数据字典', icon: 'table' }
+      }
+    ]
+  },
+  {
     path: '/form',
     component: Layout,
     children: [
