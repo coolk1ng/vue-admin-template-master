@@ -32,6 +32,25 @@ export default {
       url: `/admin/hosp/hospital/getHospitalDetail/${id}`,
       method: 'get'
     })
+  },
+  getDepartmentList(hoscode) {
+    return request({
+      url: `/admin/hosp/department/getDepartmentList/${hoscode}`,
+      method: 'get'
+    })
+  },
+  getScheduleRule(schedule) {
+    return request({
+      url: '/admin/hosp/schedule/getScheduleRule',
+      method: 'post',
+      data: schedule
+    })
+  },
+  getScheduleDetail(schedule) {
+    return request({
+      url: '/admin/hosp/schedule/getScheduleDetail',
+      method: 'post',
+      data: schedule
+    })
   }
-
 }
